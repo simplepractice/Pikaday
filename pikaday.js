@@ -1115,7 +1115,8 @@
                     top - height - field.offsetHeight > 0
                 )
             ) {
-                top = top - height - field.offsetHeight;
+                var nextTop = top - height - field.offsetHeight;
+                top = nextTop < 0 ? top : nextTop;
                 bottomAligned = false;
             }
             
